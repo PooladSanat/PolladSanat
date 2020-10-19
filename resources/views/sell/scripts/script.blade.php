@@ -167,12 +167,6 @@
 
         });
 
-
-
-
-
-
-
         $('body').on('click', '.many', function () {
             var id = $(this).data("id");
             $.get("{{ route('admin.invoice.customers.many') }}" + '/' + id, function (data) {

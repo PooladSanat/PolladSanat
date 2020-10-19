@@ -50,8 +50,14 @@ class TransferBarnController extends Controller
     public function store(Request $request)
     {
 
+        if ($request->inbarn == $request->tobarn) {
+            return response()->json(['error' => 'error']);
+        }
+
         $date = Carbon::now()->timezone('Asia/Tehran');
+
         $v = verta();
+
         \DB::table('transfer_barns')
             ->insert([
                 'user_id' => auth()->user()->id,
@@ -62,8 +68,8 @@ class TransferBarnController extends Controller
 
         $id = \DB::table('transfer_barns')->latest('id')->first();
 
-
         $number = count(collect($request)->get('type_barnn'));
+
         try {
             for ($i = 0; $i < $number; $i++) {
                 \DB::table('transfer_barns_detail')
@@ -132,9 +138,7 @@ class TransferBarnController extends Controller
             }
 
         } catch (Exception $exception) {
-
         }
-
 
         return response()->json(['success' => 'success']);
 
@@ -179,6 +183,104 @@ class TransferBarnController extends Controller
         return response()->json(['data' => $data, 'detail_returns' => $detail]);
 
 
+    }
+
+    public function checknumber(Request $request)
+    {
+        if ($request->type_barn == 1 or $request->type_barn == 2) {
+            if ($request->inbarn == 1) {
+                $product = \DB::table('barns_products')
+                    ->where('product_id', $request->product)
+                    ->where('color_id', $request->color)
+                    ->sum('Inventory');
+                if (!empty($product)) {
+                    $products = $product;
+                } else {
+                    $products = '0';
+                }
+                return \response()->json(['product' => $products]);
+            } else {
+                $product = \DB::table('barns_products')
+                    ->where('product_id', $request->product)
+                    ->where('color_id', $request->color)
+                    ->sum('Inventor');
+                if (!empty($product)) {
+                    $products = $product;
+                } else {
+                    $products = '0';
+                }
+                return \response()->json(['product' => $products]);
+            }
+        } elseif ($request->type_barn == 3) {
+            if ($request->inbarn == 1) {
+                $return = \DB::table('barn_returns')
+                    ->where('product_id', $request->product)
+                    ->where('color_id', $request->color)
+                    ->sum('Inventory');
+                if (!empty($return)) {
+                    $returns = $return;
+                } else {
+                    $returns = '0';
+                }
+                return \response()->json(['return' => $returns]);
+            } else {
+                $return = \DB::table('barn_returns')
+                    ->where('product_id', $request->product)
+                    ->where('color_id', $request->color)
+                    ->sum('Inventor');
+                if (!empty($return)) {
+                    $returns = $return;
+                } else {
+                    $returns = '0';
+                }
+                return \response()->json(['return' => $returns]);
+            }
+        } elseif ($request->type_barn == 4) {
+            if ($request->inbarn == 1) {
+                $color = \DB::table('barn_colors')
+                    ->where('color_id', $request->product)
+                    ->sum('PhysicalInventory');
+                if (!empty($color)) {
+                    $colors = $color;
+                } else {
+                    $colors = '0';
+                }
+                return \response()->json(['color' => $colors]);
+            } else {
+                $color = \DB::table('barn_colors')
+                    ->where('color_id', $request->product)
+                    ->sum('PhysicalInventor');
+                if (!empty($color)) {
+                    $colors = $color;
+                } else {
+                    $colors = '0';
+                }
+                return \response()->json(['color' => $colors]);
+            }
+        } elseif ($request->type_barn == 5) {
+            if ($request->inbarn == 1) {
+                $material = \DB::table('barn_materials')
+                    ->where('polymeric_id', $request->product)
+                    ->sum('PhysicalInventory');
+                if (!empty($material)) {
+                    $materials = $material;
+                } else {
+                    $materials = '0';
+                }
+                return \response()->json(['materials' => $materials]);
+            } else {
+                $material = \DB::table('barn_materials')
+                    ->where('polymeric_id', $request->product)
+                    ->sum('PhysicalInventor');
+                if (!empty($material)) {
+                    $materials = $material;
+                } else {
+                    $materials = '0';
+                }
+                return \response()->json(['materials' => $materials]);
+            }
+
+        }
     }
 
     public function update(Request $request)
@@ -317,7 +419,7 @@ class TransferBarnController extends Controller
 
     public function actions($row)
     {
-        if (empty($row->status)){
+        if (empty($row->status)) {
             $btn = ' <a href="javascript:void(0)" data-toggle="tooltip"
                       data-id="' . $row->id . '" data-original-title="ویرایش"
                        class="editProduct">

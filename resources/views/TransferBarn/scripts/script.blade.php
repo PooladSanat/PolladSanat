@@ -1,7 +1,6 @@
 <script src="{{asset('/public/js/a1.js')}}" type="text/javascript"></script>
 <script src="{{asset('/public/js/a2.js')}}" type="text/javascript"></script>
 <script src="{{asset('/public/js/jquery.maskedinput.js')}}" type="text/javascript"></script>
-
 <meta name="_token" content="{{ csrf_token() }}"/>
 <script type="text/javascript">
 
@@ -186,7 +185,6 @@
 
     $('#barn').addClass('active');
 
-
     $('body').on('click', '.editProduct', function () {
         added_inputs3_array = [];
         var id = $(this).data('id');
@@ -289,8 +287,8 @@
                 type: "GET",
                 url: "{{route('admin.transferbarn.check')}}?type_barn=" + type_barn,
                 success: function (res) {
-                    console.log(res);
                     if (res) {
+
                         if (res.products) {
                             if (res.products) {
 
@@ -419,12 +417,46 @@
                             } else {
                             }
                         }
+
                     }
 
 
                 }
             });
         }).change();
+
+
+        $('#ttype_barnn' + a + ',#pproductt' + a + '' + a + ',#ccolorr' + a + ',#pproductt' + a + ',#inbarnnn')
+            .change(function () {
+                var type_barn = $('#ttype_barnn' + a + '').val();
+                var product = $('#productt' + a + '').val();
+                var color = $('#colorr' + a + '').val();
+                var inbarn = $("#inbarnnn").val();
+                $.ajax({
+                    url: "{{ route('admin.transferbarn.check.number') }}",
+                    type: "get",
+                    data: {
+                        type_barn: type_barn,
+                        product: product,
+                        color: color,
+                        inbarn: inbarn,
+                    },
+                    success: function (res) {
+                        if (res.product) {
+                            $('#numberr' + a + '').attr('placeholder', 'حداکثر مقدار مجاز جابجایی:' + " " + res.product + " " + "عدد");
+                        }
+                        if (res.return) {
+                            $('#numberr' + a + '').attr('placeholder', 'حداکثر مقدار مجاز جابجایی:' + " " + res.return + " " + "عدد");
+                        }
+                        if (res.color) {
+                            $('#numberr' + a + '').attr('placeholder', 'حداکثر مقدار مجاز جابجایی:' + " " + res.color + " " + "کیلو");
+                        }
+                        if (res.materials) {
+                            $('#numberr' + a + '').attr('placeholder', 'حداکثر مقدار مجاز جابجایی:' + " " + res.materials + " " + "کیلو");
+                        }
+                    }
+                });
+            }).change();
 
 
     }
@@ -643,6 +675,79 @@
             });
         }).change();
 
+        $('#type_barnn' + a + ',#productst' + a + '' + a + ',#colorr' + a + ',#productt' + a + ',#inbarn')
+            .change(function () {
+                var type_barn = $('#type_barnn' + a + '').val();
+                var product = $('#productt' + a + '').val();
+                var color = $('#colorr' + a + '').val();
+                var inbarn = $("#inbarn").val();
+                $.ajax({
+                    url: "{{ route('admin.transferbarn.check.number') }}",
+                    type: "get",
+                    data: {
+                        type_barn: type_barn,
+                        product: product,
+                        color: color,
+                        inbarn: inbarn,
+                    },
+                    success: function (res) {
+                        if (res.error) {
+                            $('#ajaxModel').modal('hide');
+                            Swal.fire({
+                                title: 'خطا!',
+                                text: 'تعداد ارسالی برای بارگیری نمیتواند بیشتر از تعداد درخواستی مشتری باشد!',
+                                icon: 'error',
+                                confirmButtonText: 'تایید',
+                            });
+                        }
+
+                        if (res.product) {
+                            $('#numberr' + a + '').attr('placeholder', 'حداکثر مقدار مجاز جابجایی:' + " " + res.product + " " + "عدد");
+                            $('#numberr' + a + '').keyup(function () {
+                                var number = $('#numberr' + a + '').val();
+                                if (parseInt(number) > parseInt(res.product)) {
+                                    $('#saveBtn').prop("disabled", true);
+                                } else {
+                                    $('#saveBtn').prop("disabled", false);
+                                }
+                            }).keyup();
+                        }
+                        if (res.return) {
+                            $('#numberr' + a + '').attr('placeholder', 'حداکثر مقدار مجاز جابجایی:' + " " + res.return + " " + "عدد");
+                            $('#numberr' + a + '').keyup(function () {
+                                var number = $('#numberr' + a + '').val();
+                                if (parseInt(number) > parseInt(res.return)) {
+                                    $('#saveBtn').prop("disabled", true);
+                                } else {
+                                    $('#saveBtn').prop("disabled", false);
+                                }
+                            }).keyup();
+                        }
+                        if (res.color) {
+                            $('#numberr' + a + '').attr('placeholder', 'حداکثر مقدار مجاز جابجایی:' + " " + res.color + " " + "کیلو");
+                            $('#numberr' + a + '').keyup(function () {
+                                var number = $('#numberr' + a + '').val();
+                                if (parseInt(number) > parseInt(res.color)) {
+                                    $('#saveBtn').prop("disabled", true);
+                                } else {
+                                    $('#saveBtn').prop("disabled", false);
+                                }
+                            }).keyup();
+                        }
+                        if (res.materials) {
+                            $('#numberr' + a + '').attr('placeholder', 'حداکثر مقدار مجاز جابجایی:' + " " + res.materials + " " + "کیلو");
+                            $('#numberr' + a + '').keyup(function () {
+                                var number = $('#numberr' + a + '').val();
+                                if (parseInt(number) > parseInt(res.materials)) {
+                                    $('#saveBtn').prop("disabled", true);
+                                } else {
+                                    $('#saveBtn').prop("disabled", false);
+                                }
+                            }).keyup();
+                        }
+                    }
+                });
+            }).change();
 
     }
 

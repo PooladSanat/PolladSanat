@@ -209,10 +209,13 @@
         });
 
     });
+
     $('.price').mask("#,##0", {
         reverse: true
     });
 
     $('#foundation').addClass('active');
+
     $('#foundation_a').addClass('active');
+
 </script>

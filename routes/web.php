@@ -482,11 +482,9 @@ Route::group(['middleware' => ['auth', 'web']], function () {
         Route::get('/transferbarn/list', 'TransferBarnController@list')->name('admin.transferbarn.list');
         Route::get('/transferbarn/check', 'TransferBarnController@check')->name('admin.transferbarn.check');
         Route::post('/transferbarn/store', 'TransferBarnController@store')->name('admin.transferbarn.store');
-
         Route::post('/transferbarn/update', 'TransferBarnController@update')->name('admin.transferbarn.update');
-
-
         Route::get('/transferbarn/edit', 'TransferBarnController@edit')->name('admin.transferbarn.edit');
+        Route::get('/transferbarn/check/number', 'TransferBarnController@checknumber')->name('admin.transferbarn.check.number');
 
 
 

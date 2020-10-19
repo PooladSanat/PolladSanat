@@ -708,7 +708,6 @@ class SchedulingController extends Controller
 
     public function updatedatee(Request $request)
     {
-
         DB::table('schedulings')
             ->where('pack', $request->id_de)
             ->update([
@@ -732,7 +731,6 @@ class SchedulingController extends Controller
                 'scheduling_id' => $request->id_p,
                 'reason' => $request->reason,
                 'description' => $request->description,
-
             ]);
 
         Scheduling::where('id', $request->id_p)->update([
@@ -961,8 +959,5 @@ class SchedulingController extends Controller
         $string = str_replace($arabic, $newNumbers, $string);
         return str_replace($persian, $newNumbers, $string);
     }
-
-
-
 
 }
