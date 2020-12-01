@@ -487,11 +487,6 @@ Route::group(['middleware' => ['auth', 'web']], function () {
         Route::get('/transferbarn/check/number', 'TransferBarnController@checknumber')->name('admin.transferbarn.check.number');
 
 
-
-
-
-
-
     });
 
     Route::group(["namespace" => "Report"], function () {
@@ -507,16 +502,9 @@ Route::group(['middleware' => ['auth', 'web']], function () {
         Route::get('CustomerTransactions/print', 'CustomerStatusReportController@CustomerTransactionsPrint')->name('admin.CustomerTransactions.print');
         Route::get('/ReportMonthly/list/exit', 'ReportMonthlyController@ExitList')->name('admin.ReportMonthly.exit.list');
         Route::get('ReportMonthly/print/exit', 'ReportMonthlyController@ExitPrint')->name('admin.CustomerStatusReport.exit.print');
-
-
-
-
-
         Route::get('/ReportMonthly/list/tolid', 'ReportMonthlyController@Tolid')->name('admin.ReportMonthly.list.tolid');
         Route::get('/ReportMonthly/list/frosh', 'ReportMonthlyController@Frosh')->name('admin.ReportMonthly.list.frosh');
         Route::get('/ReportMonthly/list/mar', 'ReportMonthlyController@Mar')->name('admin.ReportMonthly.list.mar');
-
-
         Route::get('/ReportMonthly/list/asnad', 'ReportMonthlyController@asnad')->name('admin.ReportMonthly.list.asnad');
 
 
@@ -608,27 +596,23 @@ Route::group(['middleware' => ['auth', 'web']], function () {
         Route::get('/pPlanning/AddDevice1/{id?}', 'ProductionPlanningController@AddDevice1')->name('admin.pPlanning.AddDevice1');
         Route::get('/pPlanning/DeleteDevice1/{id?}', 'ProductionPlanningController@DeleteDevice1')->name('admin.pPlanning.DeleteDevice1');
         Route::post('pPlanning/SortDevice1', 'ProductionPlanningController@SortDevice1')->name('admin.device1.list.SortDevice1');
-
         Route::get('/pPlanning/deviceproduct2', 'ProductionPlanningController@deviceproduct2')->name('admin.pPlanning.deviceproduct2');
         Route::get('/pPlanning/deviceproductfalse2', 'ProductionPlanningController@deviceproductfalse2')->name('admin.pPlanning.deviceproductfalse2');
         Route::get('/pPlanning/Ldevice2', 'ProductionPlanningController@Ldevice2')->name('admin.device2.list');
         Route::get('/pPlanning/AddDevice2/{id?}', 'ProductionPlanningController@AddDevice2')->name('admin.pPlanning.AddDevice2');
         Route::get('/pPlanning/DeleteDevice2/{id?}', 'ProductionPlanningController@DeleteDevice2')->name('admin.pPlanning.DeleteDevice2');
         Route::post('pPlanning/SortDevice2', 'ProductionPlanningController@SortDevice2')->name('admin.device2.list.SortDevice2');
-
         Route::get('/pPlanning/deviceproduct3', 'ProductionPlanningController@deviceproduct3')->name('admin.pPlanning.deviceproduct3');
         Route::get('/pPlanning/deviceproductfalse3', 'ProductionPlanningController@deviceproductfalse3')->name('admin.pPlanning.deviceproductfalse3');
         Route::get('/pPlanning/Ldevice3', 'ProductionPlanningController@Ldevice3')->name('admin.device3.list');
         Route::get('/pPlanning/AddDevice3/{id?}', 'ProductionPlanningController@AddDevice3')->name('admin.pPlanning.AddDevice3');
         Route::get('/pPlanning/DeleteDevice3/{id?}', 'ProductionPlanningController@DeleteDevice3')->name('admin.pPlanning.DeleteDevice3');
         Route::post('pPlanning/SortDevice3', 'ProductionPlanningController@SortDevice3')->name('admin.device3.list.SortDevice3');
-
         Route::get('/pPlanning/deviceproduct4', 'ProductionPlanningController@deviceproduct4')->name('admin.pPlanning.deviceproduct4');
         Route::get('/pPlanning/Ldevice4', 'ProductionPlanningController@Ldevice4')->name('admin.device4.list');
         Route::get('/pPlanning/AddDevice4/{id?}', 'ProductionPlanningController@AddDevice4')->name('admin.pPlanning.AddDevice4');
         Route::get('/pPlanning/DeleteDevice4/{id?}', 'ProductionPlanningController@DeleteDevice4')->name('admin.pPlanning.DeleteDevice4');
         Route::post('pPlanning/SortDevice4', 'ProductionPlanningController@SortDevice4')->name('admin.device4.list.SortDevice4');
-
         Route::get('/pPlanning/deviceproduct5', 'ProductionPlanningController@deviceproduct5')->name('admin.pPlanning.deviceproduct5');
         Route::get('/pPlanning/Ldevice5', 'ProductionPlanningController@Ldevice5')->name('admin.device5.list');
         Route::get('/pPlanning/AddDevice5/{id?}', 'ProductionPlanningController@AddDevice5')->name('admin.pPlanning.AddDevice5');
@@ -637,6 +621,31 @@ Route::group(['middleware' => ['auth', 'web']], function () {
 
         //ViewProductController
         Route::get('/viewproduct/list', 'ViewProductController@list')->name('admin.viewproduct.list');
+        Route::get('/viewproduct/check', 'ViewProductController@check')->name('admin.viewproduct.check');
+        Route::post('/viewproduct/store', 'ViewProductController@store')->name('admin.viewproduct.store');
+        Route::get('/viewproduct/device', 'ViewProductController@device')->name('admin.viewproduct.device');
+        Route::get('/viewproduct/device/list', 'ViewProductController@DeviceList')->name('admin.viewproduct.device.list');
+        Route::get('/viewproduct/device/start/{id?}', 'ViewProductController@start')->name('admin.viewproduct.start');
+        Route::post('/viewproduct/device/sort', 'ViewProductController@sort')->name('admin.viewproduct.sort');
+        Route::post('/viewproduct/date', 'ViewProductController@date')->name('admin.viewproduct.date');
+        Route::get('/viewproduct/devices/list', 'ViewProductController@DevicesList')->name('admin.viewproduct.devices.list');
+        Route::post('/viewproduct/store/edit', 'ViewProductController@storeedit')->name('admin.viewproduct.store.edit');
+        Route::get('/viewproduct/devices/list/view', 'ViewProductController@DevicesListview')->name('admin.viewproduct.devices.list.view');
+        Route::get('/viewproduct/check/date', 'ViewProductController@checkdate')->name('admin.viewproduct.check.date');
+        Route::get('/viewproduct/list/devices', 'ViewProductController@listdevices')->name('admin.viewproduct.list.devices');
+        Route::post('/viewproduct/device/sortt', 'ViewProductController@sortt')->name('admin.viewproduct.sortt');
+        Route::get('/viewproduct/list/select', 'ViewProductController@getcharacteristic')->name('admin.viewproduct.select');
+        Route::get('/viewproduct/device/edit', 'ViewProductController@deviceedit')->name('admin.viewproduct.device.edit');
+
+
+        Route::post('/viewproduct/store/edit', 'ViewProductController@stedit')->name('admin.viewproduct.store.edit');
+        Route::get('/viewproduct/print/{id?}', 'ViewProductController@print')->name('admin.viewproduct.print');
+        Route::get('/viewproduct/printt/{id?}', 'ViewProductController@printt')->name('admin.viewproduct.printt');
+        Route::get('/viewproduct/CheckSuccess/{id?}', 'ViewProductController@CheckSuccess')->name('admin.viewproduct.check.success');
+
+
+        Route::post('/viewproduct/store/success', 'ViewProductController@storesuccess')->name('admin.viewproduct.store.success');
+
 
         //ManufacturingController
         Route::get('/Manufacturing/list', 'ManufacturingController@list')->name('admin.Manufacturing.list');
@@ -652,10 +661,24 @@ Route::group(['middleware' => ['auth', 'web']], function () {
 
         //StopDeviceController
         Route::get('/stopdevice/list', 'StopDeviceController@list')->name('admin.devicestop.device1.list');
-
         Route::post('/stopdevice/device1/stop', 'StopDeviceController@stop1')->name('admin.Manufacturing.device1.stop');
         Route::delete('/stopdevice/delete1/{id?}', 'StopDeviceController@delete1')->name('admin.Manufacturing.device1.stop.delete');
         Route::get('/stopdevice/device1/edit/{id?}', 'StopDeviceController@edit1')->name('admin.Manufacturing.device1.stop.edit');
+
+        //ProductionLinesController
+        Route::get('/ProductionLines/list', 'ProductionLinesController@list')->name('admin.ProductionLines.list');
+        Route::get('/ProductionLines/device/list', 'ProductionLinesController@DeviceList')->name('admin.ProductionLines.device.list');
+        Route::get('/ProductionLines/check', 'ProductionLinesController@check')->name('admin.ProductionLines.check');
+        Route::post('/ProductionLines/store', 'ProductionLinesController@store')->name('admin.ProductionLines.store');
+        Route::post('/ProductionLines/store/stop', 'ProductionLinesController@storeStop')->name('admin.ProductionLines.store.stop');
+        Route::get('/ProductionLines/device/stop', 'ProductionLinesController@Devicestop')->name('admin.ProductionLines.stop.list');
+        Route::get('/ProductionLines/device/list/production', 'ProductionLinesController@DeviceListProduction')->name('admin.ProductionLines.device.list.production');
+        Route::get('/QualityControl/listt', 'QualityControlController@listt')->name('admin.QualityControl.listt');
+        Route::get('/QualityControl/device/listt', 'QualityControlController@DeviceListt')->name('admin.QualityControl.device.listt');
+        Route::post('/ProductionLines/store/pishtlid', 'ProductionLinesController@pishtlid')->name('admin.ProductionLines.pishtlid');
+
+
+        Route::get('/ProductionLines/pish/list/production', 'ProductionLinesController@listpish')->name('admin.ProductionLines.pish.list.production');
 
 
     });

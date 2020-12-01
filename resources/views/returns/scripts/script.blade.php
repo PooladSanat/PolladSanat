@@ -44,7 +44,7 @@
             processing: true,
             serverSide: true,
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
             },
             "bInfo": false,
             "paging": false,
@@ -1196,7 +1196,6 @@
 
 </script>
 
-
 <script>
     $('body').on('click', '.editt', function () {
         var id = $(this).data('id');
@@ -1309,7 +1308,7 @@
                     var myNode = document.createElement('div');
                     myNode.id = 'actionttttt' + a;
                     myNode.innerHTML += "<div class='form-group'>" +
-                        "<button onclick='deleteService5(" + a + ", event)' class=\"form-control btn btn-danger actioo\"><i class=\"fa fa-remove \"></button></div>";
+                        "<button onclick='deleteService5(" + a + ", event)' class=\"form-control btn btn-danger actioo\"><i class=\"fa fa-removee \"></button></div>";
                     document.getElementById('actionttttt').appendChild(myNode);
 
                     $('#customer_idd').change(function () {
@@ -1520,7 +1519,7 @@
         var myNode = document.createElement('div');
         myNode.id = 'actiont' + a;
         myNode.innerHTML += "<div class='form-group'>" +
-            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger\"><i class=\"fa fa-remove\"></button></div>";
+            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger\"><i class=\"fa fa-removee\"></button></div>";
         document.getElementById('actiont').appendChild(myNode);
 
 

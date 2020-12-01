@@ -23,7 +23,7 @@
             "searching": false,
             "lengthChange": false,
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
             },
             "bInfo": false,
             "paging": false,

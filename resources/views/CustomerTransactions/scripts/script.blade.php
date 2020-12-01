@@ -34,12 +34,12 @@
                 "bPaginate": false,
                 "ordering": false,
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
                     if (parseInt(aData.price) > parseInt("0")) {
-                        $('td:eq(4)', nRow).css('background-color', 'rgba(8,71,255,0.33)');
+                        $('td:eq(4)', nRow).css('color', 'rgb(0,40,255)');
                     }
                     if (parseInt(aData.sum) > parseInt("0")) {
-                        $('td:eq(3)', nRow).css('background-color', 'rgba(255,0,0,0.33)');
+                        $('td:eq(3)', nRow).css('color', 'rgb(255,27,0)');
                     }
 
                     var api = this.api(), aData;
@@ -70,10 +70,10 @@
 
                     if (thuTotal - wedTotal > 0) {
                         $("#sum_pricee").text('').css('background-color', 'rgb(248,244,255)');
-                        $("#sum_price").text(formatNumber(Math.abs(thuTotal - wedTotal))).css('background-color', 'rgba(0,183,255,0.33)');
+                        $("#sum_price").text(formatNumber(Math.abs(thuTotal - wedTotal))).css('color', 'rgb(0,22,255)');
                     } else if (thuTotal - wedTotal < 0) {
                         $("#sum_price").text('').css('background-color', 'rgb(248,244,255)');
-                        $("#sum_pricee").text(formatNumber(Math.abs(thuTotal - wedTotal))).css('background-color', 'rgba(255,0,0,0.33)');
+                        $("#sum_pricee").text(formatNumber(Math.abs(thuTotal - wedTotal))).css('color', 'rgb(255,18,0)');
                     } else {
                         $("#sum_pricee").text('0').css('background-color', 'rgb(248,244,255)');
 
@@ -138,7 +138,7 @@
                     {"orderable": false, "targets": 0},
                 ],
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
                 },
                 "language": {
                     "search": "جستجو:",

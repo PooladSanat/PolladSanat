@@ -37,12 +37,12 @@
                 "ordering": false,
                 "searching": false,
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
 
                     if (aData.payment == "پرداخت شده") {
-                        $('td:eq(7)', nRow).css('background-color', 'rgba(8,71,255,0.31)');
+                        $('td:eq(7)', nRow).css('color', '#251ae6');
                     } else {
-                        $('td:eq(7)', nRow).css('background-color', 'rgba(255,0,0,0.32)');
+                        $('td:eq(7)', nRow).css('color', '#e60009');
 
                     }
 

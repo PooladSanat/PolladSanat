@@ -14,7 +14,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered" id="mTable">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #dbe2e5">
                         <tr>
                             <th style="text-align: center">شماره پیش فاکتور</th>
                             <th>تاریخ فروش</th>

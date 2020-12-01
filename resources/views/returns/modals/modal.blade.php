@@ -9,7 +9,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                                             <div class="table table-responsive">
                                                 <table
                                                     class="table table-responsive table-striped table-bordered">
-                                                    <thead style="background-color: #e8ecff">
+                                                    <thead style="background-color: #e6e6e6">
                                                     <tr>
                                                         <td>فاکتور</td>
                                                         <td>محصول</td>
@@ -155,7 +155,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -224,7 +224,7 @@
                                             <div class="table table-responsive">
                                                 <table
                                                     class="table table-responsive table-striped table-bordered">
-                                                    <thead style="background-color: #e8ecff">
+                                                    <thead style="background-color: #e6e6e6">
                                                     <tr>
                                                         <td>فاکتور</td>
                                                         <td>محصول</td>
@@ -292,7 +292,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -331,7 +331,7 @@
                                             <div class="table table-responsive">
                                                 <table
                                                     class="table table-responsive table-striped table-bordered">
-                                                    <thead style="background-color: #e8ecff">
+                                                    <thead style="background-color: #e6e6e6">
                                                     <tr style="background-color: rgba(0,183,255,0.16)">
                                                         <td>فاکتور</td>
                                                         <td>محصول</td>
@@ -412,7 +412,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -578,7 +578,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -594,7 +594,7 @@
                                     <div class="col-md-12">
 
                                         <table class="table table-striped table-bordered dateeeee" id="dateeeee">
-                                            <thead style="background-color: #e8ecff">
+                                            <thead style="background-color: #e6e6e6">
                                             <tr>
                                                 <td style="width: 1px">شماره فاکتور</td>
                                                 <td>فروشنده</td>
@@ -669,7 +669,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -684,7 +684,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <table class="table table-striped table-bordered dateeeeee" id="dateeeeee">
-                                            <thead style="background-color: #e8ecff">
+                                            <thead style="background-color: #e6e6e6">
                                             <tr>
                                                 <td style="width: 1px">شماره فاکتور</td>
                                                 <td>فروشنده</td>
@@ -760,7 +760,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -777,7 +777,7 @@
                                             <div class="table table-responsive">
                                                 <table
                                                     class="table table-responsive table-striped table-bordered">
-                                                    <thead style="background-color: #e8ecff">
+                                                    <thead style="background-color: #e6e6e6">
                                                     <tr>
                                                         <td>فاکتور</td>
                                                         <td>محصول</td>
@@ -855,7 +855,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -909,7 +909,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -963,7 +963,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -979,7 +979,7 @@
 
                                     <div class="col-md-12">
                                         <table class="table table-striped table-bordered dateeee" id="dateeee">
-                                            <thead style="background-color: #e8ecff">
+                                            <thead style="background-color: #e6e6e6">
                                             <tr>
                                                 <td style="width: 1px">شماره فاکتور</td>
                                                 <td>فروشنده</td>
@@ -1055,7 +1055,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -1178,7 +1178,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -1204,8 +1204,6 @@
                                         </label>
                                         <input type="text" name="print" id="print" class="form-control">
                                     </div>
-
-
                                 </div>
                                 <br/>
                                 <hr/>
@@ -1228,7 +1226,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 

@@ -17,7 +17,7 @@
             processing: true,
             serverSide: true,
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
             },
             "bInfo": false,
             "paging": false,
@@ -231,7 +231,7 @@
         var myNode = document.createElement('div');
         myNode.id = 'actiont' + a;
         myNode.innerHTML += "<div class='form-group'>" +
-            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger\"><i class=\"fa fa-remove\"></button></div>";
+            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger\"><i class=\"fa fa-removee\"></button></div>";
         document.getElementById('actiont').appendChild(myNode);
 
 

@@ -81,7 +81,7 @@ $custome = \App\Customer::where('expert', auth()->user()->id)->get();
                     </div>
                     <br/>
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">ردیف</th>
                             <th width="10%">شماره فاکتور</th>
@@ -97,7 +97,7 @@ $custome = \App\Customer::where('expert', auth()->user()->id)->get();
                         </tbody>
 
                         <tfoot align="right">
-                        <tr style="background-color: rgba(0,162,60,0.2)">
+                        <tr style="background-color: #e6e6e6">
                             <th></th>
                             <th></th>
                             <th></th>

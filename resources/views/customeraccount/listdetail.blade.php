@@ -13,7 +13,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered ee" id="ee">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">ردیف</th>
                             <th>نام مشتری</th>

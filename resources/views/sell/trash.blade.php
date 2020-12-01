@@ -2,7 +2,6 @@
 @section('content')
     @include('message.msg')
 
-
     <div class="row">
         <div class="col-md-12">
             <div class="portlet box red-pink">
@@ -18,18 +17,24 @@
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-3">
-                                <input type="text" name="from_date" id="from_date" class="form-control example1" placeholder="از تاریخ" />
+                                <input type="text" name="from_date" id="from_date" class="form-control"
+                                       placeholder="از تاریخ"/>
 
                             </div>
                             <div class="col-md-3">
-                                <input type="text" name="to_date" id="to_date" class="form-control example1" placeholder="تا تاریخ"/>
+                                <input type="text" name="to_date" id="to_date" class="form-control"
+                                       placeholder="تا تاریخ"/>
 
                             </div>
                             <div class="col-md-1">
-                                <button type="button" name="filter" id="filter" class="form-control btn btn-primary">جستجو</button>
+                                <button type="button" name="filter" id="filter" class="form-control btn btn-primary">
+                                    جستجو
+                                </button>
                             </div>
                             <div class="col-md-1">
-                                <button type="button" name="refresh" id="refresh" class="form-control btn btn-default">تازه سازی</button>
+                                <button type="button" name="refresh" id="refresh" class="form-control btn btn-default">
+                                    تازه سازی
+                                </button>
 
                             </div>
                         </div>
@@ -38,7 +43,7 @@
                     <hr/>
                     <br/>
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">
                                 <input type="checkbox" id="select_all">

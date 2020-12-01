@@ -36,70 +36,80 @@
                 "bPaginate": false,
                 "ordering": false,
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
                     if (parseInt(aData.t) > parseInt("0")) {
-                        $('td:eq(5)', nRow).css('background-color', 'rgba(204,255,141,0.58)');
+                        $('td:eq(6)', nRow).css('color', 'rgba(0,55,255)');
                     } else if (parseInt(aData.t) < parseInt("0")) {
-                        $('td:eq(5)', nRow).css('background-color', 'rgba(255,106,107,0.4)');
+                        $('td:eq(6)', nRow).css('color', 'rgba(255,0,0)');
                     } else if (parseInt(aData.t) == parseInt("0")) {
-                        $('td:eq(5)', nRow).css('background-color', 'rgb(248,244,255)');
+                        $('td:eq(6)', nRow).css('color', 'rgb(0,0,0)');
                     }
-                    $('#sum_gg').text(aData.prrice).css('background-color', 'rgba(255,106,107,0.4)');
+                    $('#sum_gg').text(aData.prrice).css('color', 'rgba(255,0,0)');
 
                     if (parseInt(aData.rreciveprice) > 0) {
-                        $('#sum_hh').text(aData.rreciveprice).css('background-color', 'rgba(0,183,255,0.42)');
+                        $('#sum_hh').text(aData.rreciveprice).css('color', 'rgba(0,55,255)');
                     } else {
-                        $('#sum_hh').text(aData.rreciveprice).css('background-color', 'rgb(255,249,255)');
+                        $('#sum_hh').text(aData.rreciveprice).css('color', 'rgb(0,0,0)');
                     }
 
-                    if (parseInt(aData.rrecivepricee) < 0) {
-                        $('#sum_jj').text(aData.rrecivepriceee).css('background-color', 'rgba(255,106,107,0.4)');
-                    } else if (parseInt(aData.rrecivepricee) > 0) {
-                        $('#sum_jj').text(aData.rrecivepriceee).css('background-color', 'rgba(0,183,255,0.42)');
+
+
+
+                    if (parseInt(aData.tar) > 0) {
+                        $('#sum_hhd').text(aData.tar).css('color', 'rgba(0,55,255)');
                     } else {
-                        $('#sum_jj').text(aData.rrecivepriceee).css('background-color', 'rgb(255,249,255)');
+                        $('#sum_hhd').text(aData.tar).css('color', 'rgb(0,0,0)');
+                    }
+
+
+                    if (parseInt(aData.rrecivepricee) < 0) {
+                        $('#sum_jj').text(aData.rrecivepriceee).css('color', 'rgba(255,0,0)');
+                    } else if (parseInt(aData.rrecivepricee) > 0) {
+                        $('#sum_jj').text(aData.rrecivepriceee).css('color', 'rgba(0,55,255)');
+                    } else {
+                        $('#sum_jj').text(aData.rrecivepriceee).css('color', 'rgb(0,0,0)');
                     }
 
 
                     if (parseInt(aData.customerr) > 0) {
-                        $('#sum_j').text(aData.customerr).css('background-color', 'rgba(255,106,107,0.4)');
+                        $('#sum_j').text(aData.customerr).css('color', 'rgba(255,0,0)');
                     } else {
-                        $('#sum_j').text(aData.customerr).css('background-color', 'rgb(255,249,255)');
+                        $('#sum_j').text(aData.customerr).css('color', 'rgb(0,0,0)');
                     }
                     $('#sum_customer').text(aData.sum_customerr);
                     if (parseInt(aData.summmm) < 0) {
-                        $('#summ').text(formatNumber(Math.abs(aData.summmm))).css('background-color', 'rgba(255,106,107,0.4)');
+                        $('#summ').text(formatNumber(Math.abs(aData.summmm))).css('color', 'rgba(255,0,0)');
                     } else if (parseInt(aData.summmm) > 0) {
-                        $('#summ').text(formatNumber(Math.abs(aData.summmm))).css('background-color', 'rgba(0,183,255,0.42)');
+                        $('#summ').text(formatNumber(Math.abs(aData.summmm))).css('color', 'rgba(0,55,255)');
                     } else if (parseInt(aData.summmm) == 0) {
-                        $('#summ').text(formatNumber(Math.abs(aData.summmm))).css('background-color', 'rgba(255,249,255)');
+                        $('#summ').text(formatNumber(Math.abs(aData.summmm))).css('color', 'rgb(0,0,0)');
                     }
 
 
                     if (parseInt(aData.account) < 0) {
-                        $('#a').text(aData.accountt).css('background-color', 'rgba(255,106,107,0.4)');
+                        $('#a').text(aData.accountt).css('color', 'rgba(255,0,0)');
                     } else if (parseInt(aData.account) > 0) {
-                        $('#a').text(aData.accountt).css('background-color', 'rgba(0,183,255,0.42)');
+                        $('#a').text(aData.accountt).css('color', 'rgba(0,55,255)');
                     } else if (parseInt(aData.account) == 0) {
-                        $('#a').text(aData.accountt).css('background-color', 'rgba(255,249,255)');
+                        $('#a').text(aData.accountt).css('color', 'rgb(0,0,0)');
                     }
 
 
                     if (parseInt(aData.summmm) < 0) {
-                        $('#b').text(formatNumber(Math.abs(aData.summmm))).css('background-color', 'rgba(255,106,107,0.4)');
+                        $('#b').text(formatNumber(Math.abs(aData.summmm))).css('color', 'rgba(255,0,0)');
                     } else if (parseInt(aData.summmm) > 0) {
-                        $('#b').text(formatNumber(Math.abs(aData.summmm))).css('background-color', 'rgba(0,183,255,0.42)');
+                        $('#b').text(formatNumber(Math.abs(aData.summmm))).css('color', 'rgba(0,55,255)');
                     } else if (parseInt(aData.summmm) == 0) {
-                        $('#b').text(formatNumber(Math.abs(aData.summmm))).css('background-color', 'rgba(255,249,255)');
+                        $('#b').text(formatNumber(Math.abs(aData.summmm))).css('color', 'rgb(0,0,0)');
                     }
                     var dd = aData.rrecivepricee - aData.customer;
 
                     if (parseInt(aData.accou) - parseInt(aData.summmm) < 0) {
-                        $('#c').text(formatNumber(Math.abs(aData.accou - aData.summmm))).css('background-color', 'rgba(0,183,255,0.42)');
+                        $('#c').text(formatNumber(Math.abs(aData.accou - aData.summmm))).css('color', 'rgba(0,55,255)');
                     } else if (parseInt(aData.accou) - parseInt(aData.summmm) > 0) {
-                        $('#c').text(formatNumber(Math.abs(aData.accou - aData.summmm))).css('background-color', 'rgba(255,106,107,0.4)');
+                        $('#c').text(formatNumber(Math.abs(aData.accou - aData.summmm))).css('color', 'rgba(255,0,0)');
                     } else if (parseInt(aData.accou) - parseInt(aData.summmm) == 0) {
-                        $('#c').text(formatNumber(Math.abs(aData.accou - aData.summmm))).css('background-color', 'rgba(255,249,255)');
+                        $('#c').text(formatNumber(Math.abs(aData.accou - aData.summmm))).css('color', 'rgb(0,0,0)');
                     }
                     $("#cap").text("جزییات صورتحساب" + " " + aData.iid);
 
@@ -127,8 +137,9 @@
                     {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "dt-center"},
                     {data: 'id', name: 'id'},
                     {data: 'date', name: 'date'},
-                    {data: 'price', name: 'price'},
+                    {data: 'p', name: 'p'},
                     {data: 'reciveprice', name: 'reciveprice'},
+                    {data: 'tw', name: 'tw'},
                     {data: 'total', name: 'total'},
                 ]
             });
@@ -158,12 +169,12 @@
                     {"orderable": false, "targets": 0},
                 ],
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
                     if (aData.status == "پرداخت شده") {
-                        $('td:eq(8)', nRow).css('background-color', 'rgba(0,183,255,0.42)');
+                        $('td:eq(8)', nRow).css('color', 'rgba(0,55,255)');
 
                     } else {
-                        $('td:eq(8)', nRow).css('background-color', 'rgba(255,106,107,0.4)');
+                        $('td:eq(8)', nRow).css('color', 'rgba(255,0,0)');
 
                     }
                 },
@@ -227,7 +238,6 @@
             processing: true,
             serverSide: true,
             searching: false,
-
             "ordering": false,
             "paging": false,
             "info": false,

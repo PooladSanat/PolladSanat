@@ -34,8 +34,6 @@ class TestController extends Controller
                     $task->update([
                         'order' => $order['position']
                     ]);
-
-
                 }
             }
         }

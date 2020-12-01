@@ -486,6 +486,7 @@
 .fa-edit:before,
 .fa-pencil-square-o:before {
     content: "\f044";
+    color: blue;
 }
 
 .fa-share-square-o:before {

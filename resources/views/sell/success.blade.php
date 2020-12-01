@@ -17,7 +17,7 @@
                         @csrf
                     </form>
                     <table class="table table-striped table-bordered data-table " id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th>
                                 <input type="checkbox" id="select_all">

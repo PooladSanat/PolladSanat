@@ -158,8 +158,17 @@
                     <th colspan="3">جمع صورتحساب</th>
                     <th>{{number_format($sum_price)}}</th>
                 </tr>
-
-
+                <tr>
+                    <th colspan="3">تخفیف صورتحساب</th>
+                    <th>{{number_format($takhfif->takhfif)}}</th>
+                </tr>
+                <?php
+                $fimal = $sum_price - $takhfif->takhfif;
+                ?>
+                <tr>
+                    <th colspan="3">مبلغ نهایی</th>
+                    <th>{{number_format($fimal)}}</th>
+                </tr>
 
 
                 </tfoot>

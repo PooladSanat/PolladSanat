@@ -11,12 +11,12 @@
                     <div class="tools"></div>
                 </div>
                 <div class="portlet-body">
-                    <a href="{{route('admin.customeraccount.print')}}" class="btn btn-primary"
+                    <a href="{{route('admin.customeraccount.print')}}" class="btn btn-success"
                        target="_blank"
                     >چاپ و نمایش
                     </a>
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">ردیف</th>
                             <th>نام مشتری</th>

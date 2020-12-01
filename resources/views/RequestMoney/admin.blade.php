@@ -13,7 +13,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered data-tablee" id="data-tablee">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">ردیف</th>
                             <th>تاریخ</th>
@@ -44,7 +44,7 @@
                                 @endif
 
                                 @if($requestmoney->sum != 0)
-                                    <th style="background-color: rgba(255,0,0,0.31)">
+                                    <th style="color: rgb(255,0,0)">
                                         {{number_format(abs($requestmoney->sum))}}
                                     </th>
                                 @else
@@ -54,7 +54,7 @@
                                 @endif
 
                                 @if($requestmoney->price != 0)
-                                    <th style="background-color: rgba(0,0,255,0.25)">
+                                    <th style="color: rgb(0,0,255)">
                                         {{number_format($requestmoney->price)}}
                                     </th>
                                 @else
@@ -70,27 +70,27 @@
                             ?>
                         @endforeach
                         </tbody>
-                        <tbody>
-                        <tr>
+                        <tfoot>
+                        <tr style="background-color: #e6e6e6">
                             <th colspan="3">جمع کل</th>
                             <th>{{number_format(abs($sum_sum))}}</th>
                             <th>{{number_format($sum_price)}}</th>
                         </tr>
-                        <tr>
+                        <tr style="background-color: #e6e6e6">
                             <th colspan="3">باقیمانده</th>
                             @if(abs($sum_sum) > $sum_price)
-                                <th style="background-color: rgba(255,0,0,0.31)">{{number_format(abs($sum_sum) - $sum_price)}}</th>
+                                <th style="color: rgb(255,0,0)">{{number_format(abs($sum_sum) - $sum_price)}}</th>
                             @else
                                 <th></th>
                             @endif
                             @if(abs($sum_sum) < $sum_price)
-                                <th style="background-color: rgba(0,0,255,0.25)">{{number_format(abs($sum_sum) - $sum_price)}}</th>
+                                <th style="color: rgb(0,0,255)">{{number_format(abs($sum_sum) - $sum_price)}}</th>
                             @else
                                 <th></th>
                             @endif
                         </tr>
 
-                        </tbody>
+                        </tfoot>
                     </table>
                     <ul>
                         <li>مبلغ درخواستی مشتری <span

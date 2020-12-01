@@ -46,7 +46,7 @@
                 "order": [[ 13, "desc" ]],
                 "ordering": false,
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
                     if (aData.status == 'عدم خروج') {
                         $('td:eq(12)', nRow).css('background-color', 'rgba(255,106,107,0.65)');
                     } else if (aData.status == 'خروج کامل') {

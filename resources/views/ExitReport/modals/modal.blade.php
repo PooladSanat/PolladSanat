@@ -8,7 +8,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -144,7 +144,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -193,7 +193,7 @@
 
 
                                         <table class="table table-striped table-bordered gfgf" id="gfgf">
-                                            <thead style="background-color: #e8ecff">
+                                            <thead style="background-color: #e6e6e6">
                                             <tr>
                                                 <th>ردیف</th>
                                                 <td>نوع سند</td>
@@ -217,7 +217,7 @@
                                         <div class="table table-responsive">
                                             <table
                                                 class="table table-responsive table-striped table-bordered">
-                                                <thead>
+                                                <thead style="background-color: #e6e6e6">
                                                 <tr>
                                                     <td>نوع سند</td>
                                                     <td>شماره سند</td>
@@ -298,7 +298,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -417,7 +417,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -432,7 +432,7 @@
 
                                     <div class="col-md-12">
                                         <table class="table table-striped table-bordered factor" id="factor">
-                                            <thead style="background-color: #e8ecff">
+                                            <thead style="background-color: #e6e6e6">
                                             <tr>
                                                 <td>شماره فاکتور</td>
                                                 <td>فروشنده</td>

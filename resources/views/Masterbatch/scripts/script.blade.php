@@ -12,7 +12,7 @@
             processing: true,
             serverSide: true,
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
             },
             "bInfo": false,
             "paging": false,
@@ -20,7 +20,7 @@
             "columnDefs": [
                 {"orderable": false, "targets": 0},
             ],
-            "order": [[ 3, "desc" ]],
+            "order": [[3, "desc"]],
             "language": {
                 "search": "جستجو:",
                 "lengthMenu": "نمایش _MENU_",

@@ -13,7 +13,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">ردیف</th>
                             <th>نام</th>
@@ -27,7 +27,7 @@
                         <tbody>
                         </tbody>
                     </table>
-                    <a class="btn btn-primary" href="{{route('admin.customers.wizard')}}">تعریف مشتری جدید</a>
+                    <a class="btn btn-success" href="{{route('admin.customers.wizard')}}">تعریف مشتری جدید</a>
                 </div>
             </div>
             <!-- END EXAMPLE TABLE PORTLET-->

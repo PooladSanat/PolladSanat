@@ -180,7 +180,7 @@
                     </li>
                     <li class="dropdown notifications-menu">
                         <a href="{{route('admin.user.lock')}}" class="dropdown-toggle">
-                            <i class="fa fa-lock"></i>
+                            <i class="fa fa-lockk"></i>
                         </a>
                     </li>
                     <li class="dropdown user user-menu">
@@ -269,7 +269,7 @@
                  || Gate::check('تعریف نقش') || Gate::check('لیست جابجایی'))
                     <li class="treeview" id="admin-user">
                         <a href="#">
-                            <i class="fa fa-user"></i> <span>مدیریت کاربران</span>
+                            <i class="fa fa-userr"></i> <span>مدیریت کاربران</span>
                             <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
@@ -487,7 +487,7 @@
                  || Gate::check('حساب مشتریان'))
                     <li class="treeview" id="customer">
                         <a href="#">
-                            <i class="fa fa-user"></i> <span>مشتریان</span>
+                            <i class="fa fa-userr"></i> <span>مشتریان</span>
                             <span class="pull-left-container">
 <i class="fa fa-angle-right pull-left"></i>
 </span>
@@ -678,6 +678,25 @@
                 {{--                    </li>--}}
                 {{--                @endif--}}
 
+                @if(Gate::check('برنامه خطوط تولید'))
+                    <li class="treeview" id="qc">
+                        <a href="#">
+                            <i class="fa fa-th-list"></i> <span>کنترل کیفیت</span>
+                            <span class="pull-left-container">
+                        <i class="fa fa-angle-right pull-left"></i>
+                        </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            @can('برنامه خطوط تولید')
+                                <li><a href="{{route('admin.QualityControl.listt')}}"><i
+                                            class="fa fa-circle-o"></i>برنامه خطوط تولید</a>
+                                </li>
+                            @endcan
+
+                        </ul>
+                    </li>
+                @endif
+
                 @can('صف تولید')
                     <li class="treeview" id="barnam">
                         <a href="#">
@@ -691,9 +710,6 @@
                             @can('صف تولید')
                                 <li><a href="{{route('admin.product.list.list')}}"><i
                                             class="fa fa-circle-o"></i>درخواست تولید</a>
-                                </li>
-                                <li><a href="#"><i
-                                            class="fa fa-circle-o"></i>جدول خطوط تولید</a>
                                 </li>
 
                                 <li><a href="#"><i
@@ -723,6 +739,12 @@
                     </li>
                 @endcan
 
+
+
+
+
+
+
                 @if(Gate::check('تولید') || Gate::check('صف تولید')
                 || Gate::check('پلن خطوط تولید') || Gate::check('سفارش تولید')
                 || Gate::check('برنامه ریزی تولید') || Gate::check('ثبت اتفاقات تولید')
@@ -738,6 +760,11 @@
                             @can('تولید')
                                 <li><a href="{{route('admin.Manufacturing.list')}}"><i
                                             class="fa fa-circle-o"></i>تولید</a>
+                                </li>
+                            @endcan
+                            @can('جدول خطوط تولید')
+                                <li><a href="{{route('admin.ProductionLines.list')}}"><i
+                                            class="fa fa-circle-o"></i>جدول خطوط تولید</a>
                                 </li>
                             @endcan
 

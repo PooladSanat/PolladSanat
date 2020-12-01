@@ -20,14 +20,7 @@
             ],
             "order": [[7, "deesc"]],
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
-                if (parseInt(aData.PhysicalInventory + aData.PhysicalInventor) <= parseInt(aData.minimum)) {
-                    $('td', nRow).css('background-color', '#fb8000');
-                } else if (parseInt(aData.PhysicalInventory + aData.PhysicalInventor) >= parseInt(aData.maximum)) {
-                    $('td', nRow).css('background-color', '#00d1fb');
-                } else {
-                    $('td', nRow).css('background-color', 'white');
-                }
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
             },
             "language": {
                 "search": "جستجو:",

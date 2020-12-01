@@ -92,7 +92,7 @@
                     <br/>
                     <table class="table table-striped table-bordered cell-border stripe display data-table"
                            id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">مشتری</th>
                             <th>فاکتور</th>

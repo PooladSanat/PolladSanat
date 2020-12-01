@@ -12,7 +12,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered data-table" id="dataa-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #dbe2e5">
                         <tr>
                             <th>نام محصول</th>
                             <th>رنگ</th>

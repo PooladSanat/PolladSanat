@@ -8,7 +8,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -138,7 +138,7 @@
                                         <div class="table table-responsive">
                                             <table
                                                 class="table table-responsive table-striped table-bordered">
-                                                <thead>
+                                                <thead style="background-color: #e6e6e6">
                                                 <tr>
                                                     <td>فاکتور</td>
                                                     <td>محصول</td>
@@ -225,7 +225,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -303,7 +303,7 @@
                                             <div class="table table-responsive">
                                                 <table
                                                     class="table table-responsive table-striped table-bordered">
-                                                    <thead>
+                                                    <thead style="background-color: #e6e6e6">
                                                     <tr>
                                                         <td>فاکتور</td>
                                                         <td>محصول</td>

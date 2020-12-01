@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers\Foundation;
 
+use App\Color;
 use App\Http\Controllers\Controller;
 use App\Polymeric;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Morilog\Jalali\Jalalian;
 use Yajra\DataTables\DataTables;
 
 class ProductionInformationController extends Controller
 {
     public function list(Request $request)
     {
+        $colors = Color::all();
         $polymerics = Polymeric::all();
         if ($request->ajax()) {
             $data = \DB::table('production_information')->get();
@@ -23,18 +26,25 @@ class ProductionInformationController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
-        return view('ProductionInformation.list', compact('polymerics'));
+        return view('ProductionInformation.list', compact('polymerics', 'colors'));
     }
 
     public function store(Request $request)
     {
+        $date = Jalalian::now()->format('Y/m/d');
         $create = Carbon::now();
         \DB::table('production_information')
             ->insert([
                 'name' => $request->name,
+                'mastarbach' => $request->mastarbach,
+                'Percentmasterbatch' => $request->Percentmasterbatch,
+                'date' => $date,
                 'created_at' => $create,
             ]);
         $production = \DB::table('production_information')->latest()->first();
+        $informations = \DB::table('production_information')
+            ->orderBy('id', 'DESC')
+            ->get();
         $count = count($request->nameee);
         for ($i = 0; $i < $count; $i++) {
             \DB::table('detail_production_information')
@@ -46,7 +56,7 @@ class ProductionInformationController extends Controller
                 ]);
         }
 
-        return response()->json(['success' => 'success']);
+        return response()->json(['success' => 'success', 'informations' => $informations]);
 
     }
 

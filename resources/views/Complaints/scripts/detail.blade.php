@@ -210,7 +210,7 @@
         var myNode = document.createElement('div');
         myNode.id = 'actiont' + a;
         myNode.innerHTML += "<div class='form-group'>" +
-            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger\"><i class=\"fa fa-remove\"></button></div>";
+            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger\"><i class=\"fa fa-removee\"></button></div>";
         document.getElementById('actiont').appendChild(myNode);
 
 

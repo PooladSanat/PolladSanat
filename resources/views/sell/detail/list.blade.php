@@ -137,11 +137,11 @@ $custmer = \App\Customer::where('id',$id->customer_id)->first();
                 <br/>
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#activity" data-toggle="tab">خلاصه پیش فاکتور</a>
+                        <li style="background-color: #e6e6e6" class="active"><a href="#activity" data-toggle="tab">خلاصه پیش فاکتور</a>
                         </li>
-                        <li><a href="#a" data-toggle="tab">سوابق خرید قبلی مشتری</a></li>
-                        <li><a href="#b" data-toggle="tab">فاکتورهای در جریان</a></li>
-                        <li><a href="#c" data-toggle="tab">صورت وضعیت</a></li>
+                        <li style="background-color: #e6e6e6"><a href="#a" data-toggle="tab">سوابق خرید قبلی مشتری</a></li>
+                        <li style="background-color: #e6e6e6"><a href="#b" data-toggle="tab">فاکتورهای در جریان</a></li>
+                        <li style="background-color: #e6e6e6"><a href="#c" data-toggle="tab">صورت وضعیت</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="active tab-pane" id="activity">
@@ -729,6 +729,9 @@ $custmer = \App\Customer::where('id',$id->customer_id)->first();
 
 <script src="{{asset('/public/assets/pages/scripts/table-datatables-colreorder.js')}}"
         type="text/javascript"></script>
+
+
+
 <script type="text/javascript">
     $(function () {
         $.ajaxSetup({
@@ -854,6 +857,9 @@ $custmer = \App\Customer::where('id',$id->customer_id)->first();
     });
 
 </script>
+
+
+
 <script>
     $(document).ready(function () {
         persianToEnNumConvert();

@@ -14,7 +14,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px;">ردیف</th>
                             <th>محصول</th>
@@ -24,7 +24,7 @@
                         <tbody>
                         </tbody>
                     </table>
-                    <a class="btn btn-primary" href="javascript:void(0)" id="createNewProduct">تعریف گروه جدید</a>
+                    <a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">تعریف گروه جدید</a>
                 </div>
             </div>
             <!-- END EXAMPLE TABLE PORTLET-->
@@ -40,7 +40,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered detail-table" id="detail-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">ردیف</th>
                             <th>اجزاء</th>
@@ -51,7 +51,7 @@
                         <tbody>
                         </tbody>
                     </table>
-                    <a class="btn btn-primary" href="javascript:void(0)" id="createNew">تعریف اجزاء جدید</a>
+                    <a class="btn btn-success" href="javascript:void(0)" id="createNew">تعریف اجزاء جدید</a>
 
                 </div>
             </div>

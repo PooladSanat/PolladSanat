@@ -8,7 +8,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -114,7 +114,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -289,7 +289,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -384,7 +384,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -482,7 +482,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 

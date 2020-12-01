@@ -43,7 +43,7 @@
             ],
             "order": [[8, "Acs"]],
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
                 if (aData.status == 'اتمام یافته') {
                     $('td:eq(7)', nRow).css('background-color', 'rgba(0,183,255,0.64)');
                 } else if (aData.status == 'در حال برسی') {
@@ -245,7 +245,7 @@
                         var myNode = document.createElement('div');
                         myNode.id = 'actiontt' + a;
                         myNode.innerHTML += "<div class='form-group'>" +
-                            "<button onclick='deleteService3(" + a + ", event)' class=\"form-control btn btn-danger actions\"><i class=\"fa fa-remove\"></button></div>";
+                            "<button onclick='deleteService3(" + a + ", event)' class=\"form-control btn btn-danger actions\"><i class=\"fa fa-removee\"></button></div>";
                         document.getElementById('actiontt').appendChild(myNode);
 
 
@@ -596,7 +596,7 @@
         var myNode = document.createElement('div');
         myNode.id = 'actiont' + a;
         myNode.innerHTML += "<div class='form-group'>" +
-            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger\"><i class=\"fa fa-remove\"></button></div>";
+            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger\"><i class=\"fa fa-removee\"></button></div>";
         document.getElementById('actiont').appendChild(myNode);
 
 

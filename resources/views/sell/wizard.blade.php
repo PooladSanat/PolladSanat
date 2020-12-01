@@ -123,7 +123,7 @@
                         <div class="table table-responsive">
                             <table
                                 class="table table-responsive table-striped table-bordered">
-                                <thead>
+                                <thead style="background-color: #e6e6e6">
                                 <tr>
                                     <td>نام محصول</td>
                                     <td>رنگ</td>
@@ -179,13 +179,13 @@
                                         <label id="tax">0</label>
                                     </th>
                                 </tr>
-                                <tr>
+                                <tr style="background-color: #e6e6e6">
                                     <th colspan="6">
                                         <center>تخفیف</center>
                                     </th>
                                     <th id="ta"></th>
                                 </tr>
-                                <tr>
+                                <tr style="background-color: #e6e6e6">
                                     <th colspan="6">
                                         <center>جمع نهایی</center>
                                     </th>

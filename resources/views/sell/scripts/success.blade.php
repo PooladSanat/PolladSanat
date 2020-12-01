@@ -75,7 +75,7 @@
             "order": [[10, "desc"]],
             "ordering": false,
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
                 if (parseInt(aData.barn) < parseInt(aData.salesNumber)) {
                     $('td:eq(9)', nRow).css('color', '#fb8000');
                 } else if (parseInt(aData.barn) >= parseInt(aData.salesNumber)) {

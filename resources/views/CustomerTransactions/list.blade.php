@@ -41,7 +41,7 @@
                     </div>
                     <br/>
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">ردیف</th>
                             <th>تاریخ</th>
@@ -54,14 +54,14 @@
                         </tbody>
 
                         <tfoot align="right">
-                        <tr>
+                        <tr style="background-color: #e6e6e6">
                             <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
                         </tr>
-                        <tr>
+                        <tr style="background-color: #e6e6e6">
                             <th colspan="3">باقیمانده حساب مشتری</th>
                             <th id="sum_pricee"></th>
                             <th id="sum_price"></th>

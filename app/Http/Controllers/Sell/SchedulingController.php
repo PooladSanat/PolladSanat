@@ -75,6 +75,7 @@ class SchedulingController extends Controller
                   ' . $row->customer_name . '
                        </a>&nbsp;&nbsp;';
                     return $btn;
+
                 })
                 ->addColumn('status', function ($row) {
                     if ($row->status != 6) {
@@ -854,6 +855,11 @@ class SchedulingController extends Controller
         $btn = null;
 
 
+        $btn = $btn . '<a href="' . route('admin.Scheduling.print', $row->pack) . '" target="_blank">
+                       <i class="fa fa-print fa-lg" title="چاپ فاکتور فروش"></i>
+                       </a>&nbsp;&nbsp;';
+
+
         if ($row->status == 5 and $row->end == 2) {
             $btn = $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"
                       data-id="' . $row->id . '" data-original-title="تغیر تاریخ بارگیری"
@@ -900,10 +906,8 @@ class SchedulingController extends Controller
                   <i class="fa fa-plus fa-lg" title="ثبت شماره فاکتور"></i>
                        </a>&nbsp;&nbsp;';
                         }
-                        $btn = $btn . '<a href="' . route('admin.Scheduling.print', $row->pack) . '" target="_blank">
-                       <i class="fa fa-print fa-lg" title="چاپ فاکتور فروش"></i>
-                       </a>&nbsp;&nbsp;';
                     }
+
 
                 }
             }

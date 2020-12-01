@@ -238,9 +238,6 @@
                 </div>
             </div>
         </div>
-
-
-
     @endif
 
     <div class="row">
@@ -258,9 +255,12 @@
                                 <div class="form-group">
                                     <div class="nav-tabs-custom">
                                         <ul class="nav nav-tabs">
-                                            <li class="active"><a href="#activity" data-toggle="tab">نمودار فروش</a>
+                                            <li style="background-color: #e6e6e6" class="active"><a href="#activity"
+                                                                                                    data-toggle="tab">نمودار
+                                                    فروش</a>
                                             </li>
-                                            <li><a href="#settings" data-toggle="tab">نمودار تولید</a></li>
+                                            <li style="background-color: #e6e6e6"><a href="#settings" data-toggle="tab">نمودار
+                                                    تولید</a></li>
                                         </ul>
                                         <div class="tab-content">
                                             <div class="active tab-pane" id="activity">
@@ -300,9 +300,9 @@
                             <div class="form-body">
                                 <div class="form-group">
                                     <table class="table table-striped table-bordered">
-                                        <thead style="background-color: #e8ecff">
+                                        <thead style="background-color: #e6e6e6">
                                         <tr>
-                                            <th style="background-color: #e8ecff;text-align: center">ردیف</th>
+                                            <th style="background-color: #e6e6e6;text-align: center">ردیف</th>
                                             <th>مشتری</th>
                                             <th>تعداد خرید(عدد)</th>
                                             <th>مبلغ خرید(ریال)</th>
@@ -316,7 +316,7 @@
                                             <tr>
 
 
-                                                <td style="background-color: #e8ecff;text-align: center">{{$number++}}</td>
+                                                <td style="background-color: #e6e6e6;text-align: center">{{$number++}}</td>
                                                 <td>
                                                     @foreach($customers as $customer)
 
@@ -360,9 +360,9 @@
                             <div class="form-body">
                                 <div class="form-group">
                                     <table class="table table-striped table-bordered">
-                                        <thead style="background-color: #e8ecff">
+                                        <thead style="background-color: #e6e6e6">
                                         <tr>
-                                            <th style="background-color: #e8ecff;text-align: center">ردیف</th>
+                                            <th style="background-color: #e6e6e6;text-align: center">ردیف</th>
                                             <th>محصول</th>
                                             <th>رنگ</th>
                                             <th>تعداد فروش</th>
@@ -377,7 +377,7 @@
                                             <tr>
 
 
-                                                <td style="background-color: #e8ecff;text-align: center">{{$number++}}</td>
+                                                <td style="background-color: #e6e6e6;text-align: center">{{$number++}}</td>
                                                 <td>
                                                     @foreach($product as $produc)
                                                         @if($productt->product_id == $produc->id)
@@ -841,11 +841,11 @@
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
 
                     if (parseInt(aData.price) > parseInt("0")) {
-                        $('td:eq(5)', nRow).css('background-color', 'rgba(204,255,141,0.65)');
+                        $('td:eq(5)', nRow).css('color', '#95ff00');
                     } else if (parseInt(aData.price) < parseInt("0")) {
-                        $('td:eq(5)', nRow).css('background-color', 'rgba(255,106,107,0.64)');
+                        $('td:eq(5)', nRow).css('color', '#ff0000');
                     } else if (parseInt(aData.price) == parseInt("0")) {
-                        $('td:eq(5)', nRow).css('background-color', 'rgb(255,255,255,255)');
+                        $('td:eq(5)', nRow).css('color', 'rgb(255,255,255,255)');
                     }
                     $('#adde').text(aData.adders);
                     $('#cappattioon').text('مشخصات کلی مشتری' + " " + "(" + aData.name + ")");
@@ -886,14 +886,12 @@
                 "info": false,
                 "bPaginate": true,
                 "bSort": false,
+                columnDefs: [
+                    {width: 1, targets: 0}
+                ],
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
-                    if (parseInt(aData.price) > parseInt("0")) {
-                        $('td:eq(4)', nRow).css('background-color', 'rgba(8,71,255,0.33)');
-                    }
-                    if (parseInt(aData.sum) > parseInt("0")) {
-                        $('td:eq(3)', nRow).css('background-color', 'rgba(255,0,0,0.33)');
-                    }
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
+
 
                     var api = this.api(), aData;
                     var intVal = function (i) {
@@ -960,12 +958,12 @@
                 "bPaginate": true,
                 "bSort": false,
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
 
                     if (aData.payment == "پرداخت شده") {
-                        $('td:eq(5)', nRow).css('background-color', 'rgba(8,71,255,0.33)');
+                        $('td:eq(5)', nRow).css('color', '#0000ff');
                     } else {
-                        $('td:eq(5)', nRow).css('background-color', 'rgba(255,0,0,0.4)');
+                        $('td:eq(5)', nRow).css('color', '#ff0000');
                     }
 
 
@@ -1008,7 +1006,7 @@
                 },
 
                 columns: [
-                    {data: 'DT_RowIndex', name: 'DT_RowIndex' , "className": "dt-center"},
+                    {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "dt-center"},
                     {data: 'date', name: 'date'},
                     {data: 'invoiceNumber', name: 'invoiceNumber'},
                     {data: 'totalfinal', name: 'totalfinal'},
@@ -1030,16 +1028,15 @@
                 "bPaginate": true,
                 "bSort": false,
                 "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                    $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                    $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
 
                     if (aData.status == "وصول نشده") {
-                        $('td:eq(9)', nRow).css('background-color', 'rgba(255,0,0,0.33)');
+                        $('td:eq(9)', nRow).css('color', '#ff0000');
                     } else if (aData.status == "وصول شده") {
-                        $('td:eq(9)', nRow).css('background-color', 'rgba(8,71,255,0.28)');
+                        $('td:eq(9)', nRow).css('color', '#0000ff');
                     } else {
-                        $('td:eq(9)', nRow).css('background-color', 'rgba(10,255,45,0.17)');
+                        $('td:eq(9)', nRow).css('color', '#8aff05');
                     }
-
 
                     var api = this.api(), aData;
                     var intVal = function (i) {
@@ -1080,7 +1077,7 @@
                 },
 
                 columns: [
-                    {data: 'DT_RowIndex', name: 'DT_RowIndex' , "className": "dt-center"},
+                    {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "dt-center"},
                     {data: 'customer', name: 'customer'},
                     {data: 'payment_id', name: 'payment_id'},
                     {data: 'type', name: 'type'},

@@ -8,7 +8,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -144,7 +144,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -298,7 +298,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -418,7 +418,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -484,7 +484,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -498,11 +498,11 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="nav-tabs-custom">
-                                            <ul class="nav nav-tabs" style="background-color: rgba(0,105,255,0.07)">
-                                                <li id="tt" class="active" style="width: 49%;"><a href="#t"
+                                            <ul class="nav nav-tabs" style="background-color: white">
+                                                <li id="tt" style="background-color: #e6e6e6" class="active"><a href="#t"
                                                                                                   data-toggle="tab">مشخصات
                                                         ریالی صورتحساب</a></li>
-                                                <li id="ff" style="width: 50%;"><a href="#f" data-toggle="tab">مشخصات
+                                                <li id="ff" style="background-color: #e6e6e6"><a href="#f" data-toggle="tab">مشخصات
                                                         فروش صورتحساب</a></li>
                                             </ul>
                                             <div class="tab-content">
@@ -510,7 +510,7 @@
                                                 <div class="active tab-pane" id="t">
                                                     <table class="table table-striped table-bordered factooooor"
                                                            id="factooooor">
-                                                        <thead style="background-color: #e8ecff">
+                                                        <thead style="background-color: #e6e6e6">
                                                         <tr>
                                                             <td style="width: 1px">شماره فاکتور</td>
                                                             <td>فروشنده</td>
@@ -545,7 +545,7 @@
                                                     <br/>
                                                     <table class="table table-striped table-bordered factooor"
                                                            id="factooor">
-                                                        <thead style="background-color: #e8ecff">
+                                                        <thead style="background-color: #e6e6e6">
                                                         <tr>
                                                             <td>شماره فاکتور</td>
                                                             <td>فروشنده</td>

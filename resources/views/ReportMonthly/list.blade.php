@@ -35,7 +35,7 @@
                     </div>
                     <br/>
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px;text-align: center">تاریخ</th>
                             <th>تعداد تولید(عدد)</th>
@@ -49,13 +49,13 @@
                         <tbody>
                         </tbody>
                         <tfoot align="right">
-                        <tr>
-                            <th style="background-color: rgba(255,106,107,0.51)"></th>
-                            <th style="background-color: rgba(255,106,107,0.51)"></th>
-                            <th style="background-color: rgba(255,106,107,0.51)"></th>
-                            <th style="background-color: rgba(255,106,107,0.51)"></th>
-                            <th style="background-color: rgba(255,106,107,0.51)"></th>
-                            <th style="background-color: rgba(255,106,107,0.51)"></th>
+                        <tr style="background-color: #e6e6e6">
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
 
                         </tr>
                         </tfoot>

@@ -7,7 +7,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -50,9 +50,6 @@
                                     </div>
 
 
-
-
-
                                     <div class="col-md-12">
 
                                         <label>درصد ترکیب
@@ -80,7 +77,6 @@
                                                required>
 
                                     </div>
-
 
 
                                     <div class="col-md-6">
@@ -135,7 +131,6 @@
 </div>
 
 
-
 <div class="modal fade" id="ajax" aria-hidden="true">
     <div class="modal-dialog col-md-12">
         <div class="modal-content">
@@ -147,7 +142,7 @@
                         </div>
                         <div class="caption pull-left">
                             <a data-dismiss="modal">
-                                <i style="color: white" class="pull-left fa fa-close"></i>
+                                <i style="color: white" class="pull-left fa fa-closee"></i>
                             </a>
                         </div>
 
@@ -163,12 +158,28 @@
                                         <div class="col-md-12">
                                             <div class="row">
 
-
                                                 <div class="col-md-4">
                                                     <label>نام:</label>
                                                     <input type="text" name="name" id="name" class="form-control">
                                                 </div>
 
+                                                <div class="col-md-4">
+                                                    <label>مستربچ:</label>
+                                                    <select name="mastarbach" id="mastarbach" class="form-control">
+                                                        <option>انتخاب کنید...</option>
+                                                        @foreach($colors as $color)
+
+                                                            <option
+                                                                value="{{$color->id}}">{{$color->manufacturer}} {{$color->masterbatch}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+
+
+                                                <div class="col-md-4">
+                                                    <label>درصد ترکیب مستربچ:</label>
+                                                    <input type="number" id="Percentmasterbatch" name="Percentmasterbatch" class="form-control">
+                                                </div>
 
 
                                             </div>

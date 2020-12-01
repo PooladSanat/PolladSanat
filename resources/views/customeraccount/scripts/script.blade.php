@@ -25,13 +25,13 @@
             ],
             "order": [[3, "deesc"]],
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
                 if (parseInt(aData.creditor) < 0) {
-                    $('td:eq(2)', nRow).css('background-color', 'rgba(255,43,28,0.62)');
+                    $('td:eq(2)', nRow).css('color', 'rgb(255,43,28)');
                 } else if (parseInt(aData.creditor) > 0) {
-                    $('td:eq(2)', nRow).css('background-color', 'rgba(144,221,251,0.99)');
+                    $('td:eq(2)', nRow).css('color', 'rgb(26,26,255)');
                 } else {
-                    $('td:eq(2)', nRow).css('background-color', 'white');
+                    $('td:eq(2)', nRow).css('color', 'white');
                 }
             },
             "language": {
@@ -226,7 +226,7 @@
             processing: true,
             serverSide: true,
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
             },
             "bInfo": false,
             "paging": false,
@@ -456,7 +456,7 @@
         var myNode = document.createElement('div');
         myNode.id = 'actiontt' + a;
         myNode.innerHTML += "<div class='form-group'>" +
-            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger actiont\"><i class=\"fa fa-remove\"></button></div>";
+            "<button onclick='deleteService2(" + a + ", event)' class=\"form-control btn btn-danger actiont\"><i class=\"fa fa-removee\"></button></div>";
         document.getElementById('actiontt').appendChild(myNode);
 
 

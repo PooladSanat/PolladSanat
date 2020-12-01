@@ -36,8 +36,6 @@
                 {data: 'January', name: 'January'},
                 {data: 'Avalanche', name: 'Avalanche'},
                 {data: 'March', name: 'March'},
-
-
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

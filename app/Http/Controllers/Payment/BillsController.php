@@ -66,7 +66,6 @@ class BillsController extends Controller
                         return 'در انتظار بررسی';
                     }
                 })
-
                 ->addColumn('customer', function ($row) {
 
                     $pack_id = \DB::table('clearing_factor')
@@ -83,7 +82,6 @@ class BillsController extends Controller
                     return $name->name;
 
                 })
-
                 ->addColumn('action', function ($row) {
                     return $this->action($row);
                 })
@@ -166,7 +164,7 @@ class BillsController extends Controller
                 ->addColumn('actioonn', function ($row) {
                     return $this->actioonn($row);
                 })
-                ->rawColumns(['actioonn','id'])
+                ->rawColumns(['actioonn', 'id'])
                 ->make(true);
         }
         return view('bills.detaillist', compact('users', 'customers'));
@@ -185,16 +183,22 @@ class BillsController extends Controller
     public function PrintPayment($id)
     {
         $pack = array();
+
         $clearing_factor = \DB::table('clearing_factor')
             ->where('clearing_id', $id)
             ->get();
+
+        $takhfif = \DB::table('clearing')
+            ->where('id', $id)
+            ->first();
+
         foreach ($clearing_factor as $item)
             $pack[] = $item->pack_id;
         $factors = \DB::table('factors')
             ->whereIn('pack_id', $pack)
             ->get();
 
-        return view('bills.print', compact('factors'));
+        return view('bills.print', compact('factors', 'takhfif'));
 
     }
 

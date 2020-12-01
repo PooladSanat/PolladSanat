@@ -155,9 +155,6 @@
     });
 
 
-
-
-
     $('body').on('click', '.detail-tolid', function () {
 
         detail_factor = $(this).data('id');

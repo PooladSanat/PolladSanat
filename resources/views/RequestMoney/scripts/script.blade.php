@@ -17,7 +17,7 @@
             processing: true,
             serverSide: true,
             "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                $('td:eq(0)', nRow).css('background-color', '#e8ecff');
+                $('td:eq(0)', nRow).css('background-color', '#e6e6e6');
             },
             "bInfo": false,
             "paging": false,
@@ -117,9 +117,9 @@
                             $('#p').val(res);
                             if (res != null) {
                                 if (parseInt(res) < "0") {
-                                    $('#hesab').css('background-color', 'rgba(255,0,0,0.39)').text(formatNumber(Math.abs(res)));
+                                    $('#hesab').css('color', 'rgb(255,21,0)').text(formatNumber(Math.abs(res)));
                                 } else if (parseInt(res) > "0") {
-                                    $('#hesab').css('background-color', 'rgba(0,0,255,0.39)').text(formatNumber(Math.abs(res)));
+                                    $('#hesab').css('color', 'rgb(0,0,255)').text(formatNumber(Math.abs(res)));
                                 } else {
                                     $('#hesab').css('background-color', 'rgb(248,255,253)').text(res);
                                 }

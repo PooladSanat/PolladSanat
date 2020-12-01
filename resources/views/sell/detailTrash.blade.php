@@ -13,7 +13,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-fluid" id="myTable">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #dbe2e5">
                         <tr>
                             <th>شماره پیش فاکتور</th>
                             <th>تاریخ فروش</th>

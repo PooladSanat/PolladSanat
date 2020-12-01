@@ -8,7 +8,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -114,7 +114,7 @@
                                         <div class="table table-responsive">
                                             <table
                                                 class="table table-responsive table-striped table-bordered">
-                                                <thead>
+                                                <thead style="background-color: #e6e6e6">
                                                 <tr>
                                                     <td>عنوان</td>
                                                     <td>فایل پیوست</td>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 
@@ -215,6 +215,9 @@
 
     </div>
 </div>
+
+
+
 <div class="modal fade" id="newmoddell" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-body">
@@ -225,7 +228,7 @@
                     </div>
                     <div class="caption pull-left">
                         <a data-dismiss="modal">
-                            <i style="color: white" class="pull-left fa fa-close"></i>
+                            <i style="color: white" class="pull-left fa fa-closee"></i>
                         </a>
                     </div>
 

@@ -91,6 +91,7 @@ class PaymentsController extends Controller
                 ->addColumn('total', function ($row) {
                     return number_format($row->sum);
                 })
+
                 ->addColumn('pack_id', function ($row) {
 
                     $btn = '<a href="javascript:void(0)" data-toggle="tooltip"
@@ -196,6 +197,7 @@ class PaymentsController extends Controller
                     return $name->name;
 
                 })
+
                 ->addColumn('total', function ($row) {
                     $detail = DB::table('invoice_product')
                         ->where('id', $row->detail_id)
@@ -978,31 +980,27 @@ class PaymentsController extends Controller
                     $t = abs($detail_customer_payment - $row->price);
                     return number_format($t);
                 })
-
-
-                ->addColumn('a', function ($row) use ($dataa,$request) {
+                ->addColumn('a', function ($row) use ($dataa, $request) {
                     $clearing = \DB::table('clearing')
                         ->where('customer_id', $dataa->customer_id)
                         ->where('id', "!=", $request->detail_factor)
                         ->sum('price');
                     return $clearing;
                 })
-                ->addColumn('b', function ($row) use ($dataa,$request) {
+                ->addColumn('b', function ($row) use ($dataa, $request) {
                     $clearing = \DB::table('detail_customer_payment')
                         ->where('customer_id', $dataa->customer_id)
                         ->where('payment_id', "!=", $request->detail_factor)
                         ->sum('price');
                     return $clearing;
                 })
-
-                ->addColumn('sort', function ($row) use ($dataa,$request) {
+                ->addColumn('sort', function ($row) use ($dataa, $request) {
                     $factor = \DB::table('factors')
                         ->where('customer_id', $dataa->customer_id)
                         ->whereNull("sort")
                         ->sum('sum');
                     return $factor;
                 })
-
                 ->rawColumns([''])
                 ->make(true);
         }

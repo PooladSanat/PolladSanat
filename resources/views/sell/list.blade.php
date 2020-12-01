@@ -12,7 +12,7 @@
                 </div>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px;">شماره پیش فاکتور</th>
                             <th>تاریخ صدور</th>
@@ -29,7 +29,7 @@
                         <tbody>
                         </tbody>
                     </table>
-                    <a class="btn btn-primary" href="{{route('admin.invoice.wizard')}}" id="createNewProduct">تعریف پیش
+                    <a class="btn btn-success" href="{{route('admin.invoice.wizard')}}" id="createNewProduct">تعریف پیش
                         فاکتور جدید</a>
                 </div>
             </div>

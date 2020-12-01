@@ -41,13 +41,14 @@
                     </div>
                     <br/>
                     <table class="table table-striped table-bordered data-table" id="data-table">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th style="width: 1px">ردیف</th>
                             <th>کد صورت حساب</th>
                             <th>تاریخ صدور</th>
                             <th>مبلغ صورت حساب(ریال)</th>
                             <th>جمع اسناد دریافتی(ریال)</th>
+                            <th>تخفیف(ریال)</th>
                             <th>مانده حساب(ریال)</th>
                         </tr>
                         </thead>
@@ -59,6 +60,7 @@
                             <th colspan="3">جمع کل</th>
                             <th id="sum_gg">0</th>
                             <th id="sum_hh">0</th>
+                            <th id="sum_hhd">0</th>
                             <th id="sum_jj">0</th>
                         </tr>
                         {{--                        <tr>--}}
@@ -66,11 +68,11 @@
                         {{--                            <th id="sum_customer">0</th>--}}
                         {{--                        </tr>--}}
                         <tr>
-                            <th colspan="5">جمع مبالغ فاکتورهای در جریان</th>
+                            <th colspan="6">جمع مبالغ فاکتورهای در جریان</th>
                             <th id="sum_j">0</th>
                         </tr>
                         <tr>
-                            <th colspan="5">صورت وضعیت</th>
+                            <th colspan="6">صورت وضعیت</th>
                             <th id="summ">0</th>
                         </tr>
                         </tfoot>
@@ -80,7 +82,7 @@
                     <br/>
 
                     <table class="table table-striped table-bordered">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th>مانده حساب مشتری</th>
                             <th>صورت وضعیت فعلی</th>
@@ -103,7 +105,7 @@
                     <br/>
 
                     <table class="table table-striped table-bordered data" id="data">
-                        <thead style="background-color: #e8ecff">
+                        <thead style="background-color: #e6e6e6">
                         <tr>
                             <th colspan="13">
                                 <center style="text-align: center">پرداختی های مشتری</center>

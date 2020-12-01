@@ -56,6 +56,20 @@ class CustomerStatusReportController extends Controller
                     return $row->id;
                 })
 
+                ->addColumn('p', function ($row) {
+                    $detail = \DB::table('clearing')
+                        ->where('id', $row->id)
+                        ->first();
+                    $sum = $detail->takhfif + $detail->price;
+                    return number_format($sum);
+
+                })
+
+                ->addColumn('tw', function ($row) {
+                    return number_format($row->takhfif);
+
+                })
+
                 ->addColumn('price', function ($row) {
                     $price = number_format($row->price);
                     return $price;
@@ -108,6 +122,16 @@ class CustomerStatusReportController extends Controller
                         ->sum('price');
                     return number_format($detail);
                 })
+
+
+                ->addColumn('tar', function ($row) use ($indate, $todate) {
+                    $detail = \DB::table('clearing')
+                        ->whereBetween('date', array($indate, $todate))
+                        ->where('customer_id', $row->customer_id)
+                        ->sum('takhfif');
+                    return number_format($detail);
+                })
+
                 ->addColumn('rrecivepriceee', function ($row) use ($indate, $todate) {
                     $data = \DB::table('clearing')
                         ->where('customer_id', $row->customer_id)
